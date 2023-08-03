@@ -2,8 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Dimensions dimensions = new Dimensions(2, 3, 4);
-        CargoInfo cargoInfo = new CargoInfo(dimensions,
+        CargoInfo cargo1 = new CargoInfo(
+                5,
+                6,
+                7,
                 5,
                 "address",
                 true,
@@ -11,8 +13,14 @@ public class Main {
                 false
         );
 
-        System.out.println(cargoInfo.dimensions.height);
-        System.out.println(cargoInfo.dimensions.width);
-        System.out.println(cargoInfo.dimensions.length);
+        // copying cargo1
+        CargoInfo cargo2 = new CargoInfo(
+            cargo1.getDimensions(),
+            cargo1.getWeight(),
+            cargo1.getAddress(),
+            cargo1.getProperty(),
+            cargo1.getId(),
+            cargo1.getFragileness()
+        );
     }
 }

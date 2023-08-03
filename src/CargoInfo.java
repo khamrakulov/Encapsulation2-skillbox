@@ -7,12 +7,13 @@ public class CargoInfo {
     String id; // регистрационный номер (может содержать буквы)
     boolean isFragile; // является ли груз хрупким
 
-    public CargoInfo(Dimensions dimensions,
-                     int weight,
-                     String address,
-                     boolean property,
-                     String id,
-                     boolean isFragile
+    public CargoInfo(
+            Dimensions dimensions,
+            int weight,
+            String address,
+            boolean property,
+            String id,
+            boolean isFragile
     ) {
         this.dimensions = dimensions;
         this.weight = weight;
@@ -22,14 +23,15 @@ public class CargoInfo {
         this.isFragile = isFragile;
     }
 
-    public CargoInfo(int width,
-                     int height,
-                     int length,
-                     int weight,
-                     String address,
-                     boolean property,
-                     String id,
-                     boolean isFragile
+    public CargoInfo(
+            int width,
+            int height,
+            int length,
+            int weight,
+            String address,
+            boolean property,
+            String id,
+            boolean isFragile
     ) {
         this.dimensions = new Dimensions(width, height, length);
         this.weight = weight;
@@ -67,7 +69,7 @@ public class CargoInfo {
         this.address = address;
     }
 
-    public boolean isProperty() {
+    public boolean getProperty() {
         return property;
     }
 
@@ -75,7 +77,7 @@ public class CargoInfo {
         return id;
     }
 
-    public boolean isFragile() {
+    public boolean getFragileness() {
         return isFragile;
     }
 }
