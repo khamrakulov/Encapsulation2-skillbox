@@ -6,7 +6,6 @@ public class CargoInfo {
     boolean property; // свойство — можно ли переворачивать
     String id; // регистрационный номер (может содержать буквы)
     boolean isFragile; // является ли груз хрупким
-    private int width, height, length;
 
     public CargoInfo(Dimensions dimensions,
                      int weight,
@@ -32,9 +31,7 @@ public class CargoInfo {
                      String id,
                      boolean isFragile
     ) {
-        this.width = width;
-        this.height = height;
-        this.length = length;
+        this.dimensions = new Dimensions(width, height, length);
         this.weight = weight;
         this.address = address;
         this.property = property;
@@ -51,9 +48,7 @@ public class CargoInfo {
     }
 
     public void setDimensions(int width, int height, int length) {
-        this.width = width;
-        this.height = height;
-        this.length = length;
+        this.dimensions = new Dimensions(width, height, length);
     }
 
     public int getWeight() {
