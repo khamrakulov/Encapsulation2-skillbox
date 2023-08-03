@@ -1,6 +1,5 @@
 public class CargoInfo {
 
-
     int weight; // масса
     String address; // адрес
     boolean property; // свойство — можно ли переворачивать

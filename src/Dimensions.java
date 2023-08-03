@@ -9,6 +9,10 @@ public class Dimensions {
         this.length = length;
     }
 
+    public int getVolume(int width, int height, int length) {
+        return width * height * length;
+    }
+
     public int getWidth() {
         return width;
     }
