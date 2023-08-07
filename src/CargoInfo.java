@@ -45,29 +45,19 @@ public class CargoInfo {
         return dimensions;
     }
 
-    public void setDimensions(Dimensions dimensions) {
-        this.dimensions = dimensions;
-    }
 
-    public void setDimensions(int width, int height, int length) {
-        this.dimensions = new Dimensions(width, height, length);
-    }
 
     public int getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
+
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+
 
     public boolean getProperty() {
         return property;
@@ -79,5 +69,44 @@ public class CargoInfo {
 
     public boolean getFragileness() {
         return isFragile;
+    }
+
+    // setters
+
+    public CargoInfo setDimensions(Dimensions dimensions) {
+        return new CargoInfo(
+                dimensions,
+                this.weight,
+                this.address,
+                this.property,
+                this.id,
+                this.isFragile
+        );
+    }
+
+    public void setDimensions(int width, int height, int length) {
+        this.dimensions = new Dimensions(width, height, length);
+    }
+
+    public CargoInfo setAddress(String address) {
+        return new CargoInfo(
+                this.dimensions,
+                this.weight,
+                address,
+                this.property,
+                this.id,
+                this.isFragile
+        );
+    }
+
+    public CargoInfo setWeight(int weight) {
+        return new CargoInfo(
+                this.dimensions,
+                weight,
+                this.address,
+                this.property,
+                this.id,
+                this.isFragile
+        );
     }
 }

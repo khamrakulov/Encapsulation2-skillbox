@@ -22,5 +22,7 @@ public class Main {
             cargo1.getId(),
             cargo1.getFragileness()
         );
+
+        CargoInfo cargo3 = cargo1.setWeight(50);
     }
 }
